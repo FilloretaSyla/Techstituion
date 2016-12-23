@@ -2,9 +2,13 @@
 <html>
 	<head>
 		<title>Formulari i njoftimit</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
 		<!--<meta http-equiv="refresh" content="3" />-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+                <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.validate.min.js') } } > 
+		</script>
+		
 
 		<script type="text/javascript">
 
@@ -404,7 +408,7 @@
 			$("#Pytja"+vendi).show();
 			$( ".butoni1" ).click(function() {
 				if( vendi == 1 ) {
-					alert("Ku po don!");
+					alert("Nuk mund te kalohet mbrapa");
 				} else {
 					vendi--;
 					str = "#Pytja" + (vendi+1);
